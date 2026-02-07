@@ -52,10 +52,7 @@ plt.show()
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
-```
 
-# Count visitors in each age group
-```
 df1=df['Age']
 df2=df['Income']
 df3=pd.concat([df1,df2],axis=1)
@@ -80,3 +77,4 @@ plt.show()
 
 
 ### Result:
+Implementation of Cluster and Visitor Segmentation for Navigation patterns hasbeen done successfully.
