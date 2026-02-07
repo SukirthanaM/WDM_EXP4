@@ -22,9 +22,7 @@ import pandas as pd
 df=pd.read_csv(r"C:\Users\admin\Downloads\clustervisitor (1).csv")
 df
 cluster = {"Young": (df['Age'] <= 30),"Middle": ((df['Age'] > 30) & (df['Age'] <= 50)),"Old": (df['Age'] > 50)}
-```
-# Perform segmentation based on characteristics (e.g., age groups)
-```
+
 count=[]
 for group,condition in cluster.items():
     visitors=df[condition]
@@ -66,9 +64,7 @@ newdf=s.fit_transform(df3)
 k=KMeans(n_clusters=4,random_state=55)
 df3['cluster']=k.fit_predict(newdf)
 df3
-```    
-# Define age group labels and plot a bar chart
-```
+
 import matplotlib.pyplot as plt
 plt.figure(figsize=(8,6))
 plt.scatter(x=df3['Age'],y=df3['Income'],c=df3['cluster'])
